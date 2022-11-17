@@ -103,6 +103,36 @@ class find_elements {
             return result_element;
         }
     }
+    async find_element_by_id(id_value){
+        var result_element = null
+        try{
+            var processed_value = '#'+id_value;
+            return result_element = await $(processed_value);
+        }
+        catch(Exception){
+            return result_element;
+        }
+    }
+    async find_element_with_tag_and_value(tag_name,value){
+        var result_element = null
+        try{
+            var processed_value = tag_name+'#'+value;
+            return result_element = await $(processed_value);
+        }
+        catch(Exception){
+            return result_element;
+        }
+    }
+    async find_element_with_tag_and_classname(tag_name,value){
+        var result_element = null
+        try{
+            var processed_value = tag_name+'.'+value;
+            return result_element = await $(processed_value);
+        }
+        catch(Exception){
+            return result_element;
+        }
+    }
 
 
 
