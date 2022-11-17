@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//span[text()='Life is easier on iPhone.'][1]"
+}

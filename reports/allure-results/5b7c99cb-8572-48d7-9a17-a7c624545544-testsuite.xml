@@ -1,0 +1,95 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1668576327788' stop='1668576330603'>
+    <name>Amazon product search: Retrieve text from the search field</name>
+    <title>Amazon product search: Retrieve text from the search field</title>
+    <test-cases>
+        <test-case start='1668576327788' status='passed' stop='1668576327789'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1668576327789' status='broken' stop='1668576330598'>
+            <name>Given I am on the search results page</name>
+            <title>Given I am on the search results page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps>
+                <step start='1668576327790' status='passed' stop='1668576330106'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='a1029b4d-93e7-451a-b2f3-838820f9091d-attachment.json' type='application/json' size='37'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1668576330107' status='passed' stop='1668576330584'>
+                    <name>GET /session/:sessionId/url</name>
+                    <title>GET /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='917f4868-6e04-4405-8378-f683fc512a09-attachment.png' type='image/png' size='583426'/>
+                    </attachments>
+                    <steps>
+                        <step start='1668576330113' status='passed' stop='1668576330129'>
+                            <name>GET /session/:sessionId/screenshot</name>
+                            <title>GET /session/:sessionId/screenshot</title>
+                            <attachments>
+                                <attachment title='Response' source='0bd75b16-a79a-42a2-8c25-958e7dac801e-attachment.json' type='application/json' size='24'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>TypeError: browser.getUrl(...).contains is not a function</message>
+                <stack-trace>TypeError: browser.getUrl(...).contains is not a function
+                    at World.&lt;anonymous> (C:\Dev\VsCode\BDDWebDriverIO\features\step-definitions\gettext_steps.js:5:37)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1668576330599' status='pending' stop='1668576330601'>
+            <name>And I am printing the search term given in the searchbox</name>
+            <title>And I am printing the search term given in the searchbox</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1668576330602' status='passed' stop='1668576330602'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

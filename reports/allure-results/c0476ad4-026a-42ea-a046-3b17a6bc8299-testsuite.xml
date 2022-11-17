@@ -1,0 +1,102 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1668576589062' stop='1668576589449'>
+    <name>Amazon product search: Retrieve text from the search field</name>
+    <title>Amazon product search: Retrieve text from the search field</title>
+    <test-cases>
+        <test-case start='1668576589062' status='passed' stop='1668576589063'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1668576589064' status='passed' stop='1668576589430'>
+            <name>Given I am on the search results page</name>
+            <title>Given I am on the search results page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps>
+                <step start='1668576589067' status='passed' stop='1668576589424'>
+                    <name>GET /session/:sessionId/url</name>
+                    <title>GET /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='3a14d2a5-bb53-4881-8888-0bf4907bd23c-attachment.png' type='image/png' size='298307'/>
+                    </attachments>
+                    <steps>
+                        <step start='1668576589071' status='passed' stop='1668576589125'>
+                            <name>GET /session/:sessionId/screenshot</name>
+                            <title>GET /session/:sessionId/screenshot</title>
+                            <attachments>
+                                <attachment title='Response' source='e5742dfa-ef43-46a5-a5a9-295205152ea9-attachment.json' type='application/json' size='97'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1668576589430' status='broken' stop='1668576589445'>
+            <name>And I am printing the search term given in the searchbox</name>
+            <title>And I am printing the search term given in the searchbox</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps>
+                <step start='1668576589438' status='broken' stop='1668576589445'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>TypeError: amazon_utilitiespage.searchBox.getValue is not a function</message>
+                <stack-trace>TypeError: amazon_utilitiespage.searchBox.getValue is not a function
+                    at World.&lt;anonymous> (C:\Dev\VsCode\BDDWebDriverIO\features\step-definitions\gettext_steps.js:7:72)
+                    at World.executeAsync (C:\Dev\VsCode\BDDWebDriverIO\node_modules\@wdio\utils\build\shim.js:333:27)
+                    at World.testFrameworkFnWrapper (C:\Dev\VsCode\BDDWebDriverIO\node_modules\@wdio\utils\build\test-framework\testFnWrapper.js:51:32)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                    at async wrapPromiseWithTimeout (C:\Dev\VsCode\BDDWebDriverIO\node_modules\@cucumber\cucumber\lib\time.js:67:12)
+                    at async Object.run (C:\Dev\VsCode\BDDWebDriverIO\node_modules\@cucumber\cucumber\lib\user_code_runner.js:64:22)
+                    at async Object.run (C:\Dev\VsCode\BDDWebDriverIO\node_modules\@cucumber\cucumber\lib\runtime\step_runner.js:52:26)
+                    at async TestCaseRunner.invokeStep (C:\Dev\VsCode\BDDWebDriverIO\node_modules\@cucumber\cucumber\lib\runtime\test_case_runner.js:93:16)
+                    at async TestCaseRunner.runStep (C:\Dev\VsCode\BDDWebDriverIO\node_modules\@cucumber\cucumber\lib\runtime\test_case_runner.js:237:26)
+                    at async C:\Dev\VsCode\BDDWebDriverIO\node_modules\@cucumber\cucumber\lib\runtime\test_case_runner.js:163:48</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1668576589446' status='passed' stop='1668576589448'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
