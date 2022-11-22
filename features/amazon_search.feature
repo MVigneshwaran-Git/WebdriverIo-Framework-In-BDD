@@ -1,10 +1,4 @@
-Feature: Amazon product search
-
-Scenario: Login to the practice automation website
-    Given I am on the practice automation website
-    And I am entering my "username" and "password"
-    When I click the submit button 
-    Then login message is displayed
+Feature: Automation in PA website
 
 Scenario: Fill up the contact form in PA website
     Given I am PA website
