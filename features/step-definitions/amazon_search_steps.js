@@ -1,14 +1,9 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
 const amazonhomePage = require("../pageobjects/amazon_homepage");
-const elementFindingPage = require("../utilitiesFunct/find_elements");
-const performAction = require("../utilitiesFunct/actions_on_elements");
-const actions_on_elements = require('../utilitiesFunct/actions_on_elements');
 const inputdata = require("../inputdata/inputdata");
 
-
 Given('I am on the Amazon app',async function () {
-           
-          await browser.url('https://www.amazon.in/');//openUrl //convert into business function
+          browser.url('https://www.amazon.in/');//openUrl //convert into business function
           expect(browser).toHaveTitle("Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
           //await amazonhomePage.sshot(); 
          });
