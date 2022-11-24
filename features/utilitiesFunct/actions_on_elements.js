@@ -65,6 +65,27 @@ class actions_on_elements {
         }
     }
 
+    async move_to_element(parent_element, child_element){
+        await parent_element.moveTo(child_element);
+    }
+
+    async hover_on_element(element){
+        await elementHover(element);
+    }
+
+    async press_key(element, keyboard_key){
+        await element.keys(keyboard_key);
+    }
+
+    async drag_and_drop(source,target){
+        await source.dragAndDrop(target);
+    }
+
+    async scroll_till_element_isVisible(element){
+        await element.scrollIntoView();
+    }
+
+
 
 
 }
