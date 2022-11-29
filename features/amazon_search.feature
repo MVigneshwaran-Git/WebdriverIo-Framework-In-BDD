@@ -1,3 +1,5 @@
+#Feature file to perform a product search in amaozon
+
 Feature: Amazon product search
 
 Scenario: To search a product in amazon by using search box

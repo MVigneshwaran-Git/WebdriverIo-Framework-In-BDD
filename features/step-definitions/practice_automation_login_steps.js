@@ -18,5 +18,4 @@ When('I click the submit button',async function () {
     });
 Then('login message is displayed',async function () {
     await pa_login_page.verifyLoginMessageDisplayed();
-           
     });

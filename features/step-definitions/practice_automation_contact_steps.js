@@ -14,6 +14,5 @@ When('I click the submitbutton',async function () {
     await pa_contact_page.clickSubmit();
           });
 Then('I should see the thank you message',async function () {
-    console.log("hi");
-    //await pa_contact_page.verifyThanksMessage();
+    await pa_contact_page.verifyThanksMessage();
          });

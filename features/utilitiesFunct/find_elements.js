@@ -1,6 +1,7 @@
 const { default: $$ } = require("webdriverio/build/commands/browser/$$");
 
 //this class holds the multiple ways to find the elements
+
 class find_elements {
     async find_element(locatortype,value) { //general method deals both css and class level selectors
         var result_element = null

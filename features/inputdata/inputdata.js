@@ -1,3 +1,5 @@
+//This js file holds the input data needed for execution in key value manner
+
 module.exports = {
     search_key:'iphone',
     searchBox_xpath:'twotabsearchtextbox',

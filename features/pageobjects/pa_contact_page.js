@@ -1,12 +1,13 @@
 const elementFindingPage = require("../utilitiesFunct/find_elements");
 const performAction = require("../utilitiesFunct/actions_on_elements");
 class paContactPage {
+    //we will find the elements by using elementFindingPage
+    //we will perform the action on elements by using performAction class
 
     async navigateToContactPage(){
         var contactLink = await elementFindingPage.find_element_by_text_containedIn_tag('a','Con');
         await performAction.click_element(contactLink);
     }
-
 
     async fillDetails(){ //xpath structure ----> //input#value
 
@@ -22,11 +23,13 @@ class paContactPage {
         var commentBox = await elementFindingPage.find_element_with_tag_and_value('textarea','wpforms-161-field_2');
         await performAction.set_value(commentBox,'thanks');
     }
+
     async clickSubmit(){
         var submitButton = await elementFindingPage.find_element_with_tag_and_value('button','wpforms-submit-161');
         await performAction.click_element(submitButton);
         
     }
+    
     async verifyThanksMessage(){
         var thanksMessage = await elementFindingPage.find_element_with_tag_and_value('div','wpforms-confirmation-161');
         await performAction.is_displayed(thanksMessage);

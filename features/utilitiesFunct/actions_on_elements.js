@@ -1,5 +1,8 @@
 //const { default: $ } = require("webdriverio/build/commands/browser/$");
 const find_element_page = require('../utilitiesFunct/find_elements');
+
+//This class file is used to hold the various methods which will the perform the action on elements
+
 class actions_on_elements {
 
     async click_element(element){
@@ -8,6 +11,7 @@ class actions_on_elements {
             element.click();
         }    
     }
+    
     async get_element_innertext(locatortype,value){
         const element = await find_element_page.find_element(locatortype,value); 
          //find method can be changed as per requirement
@@ -16,6 +20,7 @@ class actions_on_elements {
             return text;
         }
     }
+
     async is_enabled(locatortype,value){
         const element = await find_element_page.find_element(locatortype,value);
         if(element){
@@ -23,12 +28,14 @@ class actions_on_elements {
             return element_status;
         }
     }
+
     async set_value(element, key){
         //const element = await find_element_page.find_element(locatortype,value);
         if(element){
             await element.setValue(key);
         }
     }
+
     async get_property(element,attribute_type){  
         //const element = element //first find the element
         if(element){
@@ -36,6 +43,7 @@ class actions_on_elements {
             return property; //need to be tested                       of the element will be returned
         }
     }
+
     async is_clickable(element){  
         //const element = element //first find the element
         if(element){
@@ -43,6 +51,7 @@ class actions_on_elements {
             return is_click; //need to be tested
         }
     }
+
     async is_displayed(element){  
         //const element = element //first find the element
         if(element){
@@ -50,6 +59,7 @@ class actions_on_elements {
             return is_ele_displayed; //need to be tested
         }
     }
+
     async is_displayed_in_view(element){  
         //const element = element //first find the element
         if(element){
@@ -57,6 +67,7 @@ class actions_on_elements {
             return is_ele_displayed; //need to be tested
         }
     }
+
     async is_equal(element_one, element_two){  
         //const element = element //first find the element
         if(element){
