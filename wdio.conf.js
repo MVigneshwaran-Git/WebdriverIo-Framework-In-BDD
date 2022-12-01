@@ -273,7 +273,6 @@ exports.config = {
             }
             else{
                 await browser.saveScreenshot(('./reports/screenshots/Fail_' +moment().format('DD-MMM-YYYY-HH-MM-SS') + '.png'))
-                
             }
 
         }
