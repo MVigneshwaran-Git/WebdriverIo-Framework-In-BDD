@@ -3,6 +3,7 @@ const VaDocLoginPage = require("../pageobjects/vadoc_login_page");
 const VAFileUploadPage = require('../pageobjects/va_fileupload_page');
 
 Given('I am on the VA login page',async function () {
+        await browser.url('https://dm.web.vision-dev.co.uk/');
         await VaDocLoginPage.clickLoginLink();
         
     });

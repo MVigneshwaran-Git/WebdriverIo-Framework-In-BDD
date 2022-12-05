@@ -64,6 +64,12 @@ class actions_on_elements {
             return is_elements_equal; //need to be tested
         }
     }
+    async wait_for_enabled(element){
+        await element.waitForEnabled({ timeout: 5000 });
+    }
+    async wait_for_displayed(element){
+        await element.waitForDisplayed({ timeout: 5000 });
+    }
 
 
 

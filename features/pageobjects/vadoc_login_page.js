@@ -17,6 +17,10 @@ class VaDocLoginPage {
         }  
     }
     async enterCredentials(){
+        const username =await  elementFindingPage.find_element_with_tag_and_value('input','email');
+        await performAction.set_value(username,'rlin@test2.com');
+        const password = await elementFindingPage.find_element_with_tag_and_value('input','password');
+        await performAction.set_value(password,'Vision360');
         
         
         const signInButton = await elementFindingPage.find_element_with_tag_and_classname('button','css-14s8p65');
@@ -29,7 +33,7 @@ class VaDocLoginPage {
         await performAction.wait_for_displayed(roleSelect)
         await performAction.click_element(roleSelect);
         //await browser.pause(3000);
-        const role = await elementFindingPage.find_element_by_xpath(inputdata.role_xpath);
+        const role = await elementFindingPage.find_element_by_xpath(`//li[text()='Dundee Practice']`);
         await performAction.wait_for_displayed(role);
         await performAction.click_element(role);
         await browser.pause(3000);
