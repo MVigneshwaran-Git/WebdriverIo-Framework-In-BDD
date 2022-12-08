@@ -65,10 +65,10 @@ class actions_on_elements {
         }
     }
     async wait_for_enabled(element){
-        await element.waitForEnabled({ timeout: 5000 });
+        await element.waitForEnabled({ timeout: 60000 });
     }
     async wait_for_displayed(element){
-        await element.waitForDisplayed({ timeout: 5000 });
+        await element.waitForDisplayed({ timeout: 60000 });
     }
 
 

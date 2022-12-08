@@ -9,4 +9,7 @@ Scenario: To login into VA Document site
     And I click on the upload button and browsing my files
     And I am choosing the file from my local memory
     When I click the continue button
-    Then the chosen file will be uploaded
+    And the chosen file will be uploaded
+    And I am on the image view
+    When I click the rotate right side button
+    Then The image is rotated towards right side

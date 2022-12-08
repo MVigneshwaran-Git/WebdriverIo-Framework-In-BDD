@@ -1,9 +1,10 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
 const VaDocLoginPage = require("../pageobjects/vadoc_login_page");
 const VAFileUploadPage = require('../pageobjects/va_fileupload_page');
+const rotatePage = require("../pageobjects/va_rotate_image_page");
 
 Given('I am on the VA login page',async function () {
-        await browser.url('https://dm.web.vision-dev.co.uk/');
+        
         await VaDocLoginPage.clickLoginLink();
         
     });
@@ -21,7 +22,6 @@ When('I click the select button',async function () {
            
          });
 Then('I am on homepage',async function () {
-  await console.log("check");
   await expect(browser).toHaveTitleContaining('Document Management')
          });
 Given('I click on the upload button and browsing my files',async function () {
@@ -37,3 +37,13 @@ When('I click the continue button',async function () {
 Then('the chosen file will be uploaded',async function () {
  await VAFileUploadPage.verifySuccessMessage();
         });
+Then('I am on the image view', async function () {
+  await rotatePage.naviagateToPatientFile();
+
+          });
+When('I click the rotate right side button',async function () {
+  await rotatePage.clickrotateRightButton();
+          });
+ Then('The image is rotated towards right side', async function () {
+  await rotatePage.checkImageRotated();
+          });

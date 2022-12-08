@@ -18,6 +18,7 @@ class VaDocLoginPage {
     }
     async enterCredentials(){
         const username =await  elementFindingPage.find_element_with_tag_and_value('input','email');
+        await performAction.wait_for_displayed(username);
         await performAction.set_value(username,'rlin@test2.com');
         const password = await elementFindingPage.find_element_with_tag_and_value('input','password');
         await performAction.set_value(password,'Vision360');
@@ -37,7 +38,6 @@ class VaDocLoginPage {
         await performAction.wait_for_displayed(role);
         await performAction.click_element(role);
         await browser.pause(3000);
-        await console.log("clicked");
         
     }
     
@@ -56,7 +56,7 @@ class VaDocLoginPage {
                 console.log('matched and break');
                 break;
             }
-            break;
+            break
         }
        
 
